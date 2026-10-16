@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #4a67a5;
+    color: rgb(5, 5, 5);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Contenedor principal */
+.contenedor {
+    width: 100%;
+    max-width: 400px;
+}
+
+
+/* Caja del calendario */
+.calendario {
+    background: #e3e7ed;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* Encabezado del mes */
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.encabezado h2 {
+    font-size: 18px;
+}
+
+.encabezado span {
+    color: #60a5fa;
+    cursor: default;
+}
+
+/* Dias de la semana y fechas */
+.dias,
+.fechas {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    text-align: center;
+}
+
+.dias {
+    color: #60a5fa;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.fechas div {
+    padding: 10px 0;
+    border-radius: 6px;
+}
+
+/* Efecto visual de la fecha seleccionada */
+.fechas .seleccionado {
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+}
+
+.fechas .vacio {
+    padding: 10px 0;
+}
+
+/* Fecha seleccionada */
+.fecha-elegida {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #374151;
+    margin-top: 20px;
+    padding-top: 15px;
+    font-size: 13px;
+}
+
+.fecha-elegida span {
+    color: #9ca3af;
+}
+
+/* Botones inferiores */
+.botones {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: default;
+}
+
+.cancelar {
+    background: transparent;
+    color: white;
+    border: 1px solid #ac0d0d;
+}
+
+.aceptar {
+    background: #2563eb;
+    color: white;
+    border: none;
+}
